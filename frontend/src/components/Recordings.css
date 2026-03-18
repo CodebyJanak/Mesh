@@ -1,0 +1,83 @@
+.recordings-panel { display: flex; flex-direction: column; gap: 16px; }
+
+.record-controls {
+  padding: 16px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.recording-active {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+
+.rec-indicator {
+  display: flex; align-items: center; gap: 6px;
+  color: var(--red); font-size: 13px; font-weight: 600;
+  animation: pulse-dot 1s ease-in-out infinite;
+}
+
+.start-rec-btn, .stop-rec-btn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 16px; border-radius: var(--radius);
+  font-size: 13px; font-family: var(--font-mono);
+  cursor: pointer; transition: all var(--transition);
+}
+
+.start-rec-btn {
+  background: var(--red-dim); border: 1px solid rgba(255,59,92,0.3);
+  color: var(--red); width: fit-content;
+}
+.start-rec-btn:hover { background: rgba(255,59,92,0.2); border-color: var(--red); }
+
+.stop-rec-btn {
+  background: var(--red); border: none; color: white; font-weight: 600;
+}
+.stop-rec-btn:hover { background: #e0304f; }
+
+.rec-note { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+/* List */
+.recordings-list { display: flex; flex-direction: column; gap: 8px; }
+
+.rec-loading {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--text-secondary); padding: 16px 0;
+}
+@keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+.spin-icon { animation: spin 1.2s linear infinite; }
+
+.rec-empty {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; padding: 32px 0; text-align: center;
+  color: var(--text-muted); font-size: 13px; line-height: 1.6;
+}
+
+.recording-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+.recording-item:hover { border-color: var(--border-bright); }
+
+.rec-icon {
+  width: 36px; height: 36px; border-radius: var(--radius);
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); flex-shrink: 0;
+}
+
+.rec-info { flex: 1; min-width: 0; }
+.rec-title { font-size: 13px; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rec-meta { font-size: 11px; color: var(--text-secondary); margin-top: 3px; }
+
+.rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.rec-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: var(--radius);
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-secondary); cursor: pointer;
+  text-decoration: none; transition: all var(--transition);
+}
+.rec-btn:hover { border-color: var(--border-bright); color: var(--text-primary); }
+.rec-btn.danger:hover { border-color: var(--red); color: var(--red); background: var(--red-dim); }
