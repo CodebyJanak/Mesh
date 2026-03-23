@@ -166,3 +166,4 @@ mesh/
 2. Import on [vercel.com](https://vercel.com)
 3. Add all `VITE_` env variables
 4. Deploy
+
