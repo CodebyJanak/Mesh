@@ -40,6 +40,8 @@ npm run dev
 
 Your frontend runs at: `http://localhost:5173`
 
+
+
 ---
 
 ### Step 3 — Backend Setup
@@ -151,19 +153,3 @@ mesh/
 - Streamer metrics (duration, peak viewers)
 
 ---
-
-## Deploy (Free)
-
-**Backend → Render**
-1. Push `backend/` folder to GitHub
-2. Create new Web Service on [render.com](https://render.com)
-3. Build command: `npm install`
-4. Start command: `npm start`
-5. Add all `.env` variables in Render dashboard
-
-**Frontend → Vercel**
-1. Push `frontend/` folder to GitHub
-2. Import on [vercel.com](https://vercel.com)
-3. Add all `VITE_` env variables
-4. Deploy
-
